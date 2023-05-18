@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Montserrat:wght@400;700&display=swap");
 @keyframes glow {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #a66161, 0 0 40px #a66161;
@@ -33,7 +32,7 @@
   background-image: url("./img/bg-hero-L.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left bottom;
+  background-position: left center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,6 +47,8 @@
 }
 #es-RC-container .es-hero__left--new {
   background-color: #0f6848;
+  font-family: "Barlow Condensed", "Helvetica", sans-serif;
+  font-size: 24px;
   max-width: -moz-fit-content;
   max-width: fit-content;
   padding: 0.2rem;
@@ -55,11 +56,9 @@
 }
 #es-RC-container .es-hero__left--title {
   font-size: clamp(2.5rem, 2.3618rem + 0.6316vw, 2.875rem);
-  min-width: 10ch;
   text-shadow: 4px 2px 4px #a66161;
 }
 #es-RC-container .es-hero__left--subtitle {
-  font-size: clamp(1.125rem, 1.0789rem + 0.2105vw, 1.25rem);
   text-shadow: 4px 2px 4px #a66161;
   text-align: center;
 }
@@ -67,31 +66,32 @@
   background-image: url("./img/bg-hero-R.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: top;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-  min-height: 500px;
+  min-height: 400px;
 }
 #es-RC-container .es-hero__right--headline {
   color: white;
-  font-family: "gotham-condensed-bold", "Open Sans", sans-serif;
+  font-family: "Barlow Condensed", "Helvetica", sans-serif;
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
-  font-size: 36px;
+  font-size: clamp(2.5rem, 2.35rem + 0.8vw, 3rem);
+  line-height: 0.9;
   text-shadow: 4px 2px 4px #a66161;
   transform: rotate(355deg) skew(-5deg, 0deg);
   position: absolute;
   right: 1rem;
-  top: 1.5rem;
+  bottom: 3rem;
   animation: glow 2s ease-in-out infinite alternate;
 }
 #es-RC-container .es-hero__middle {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row-reverse;
+  align-items: center;
   max-width: -moz-fit-content;
   max-width: fit-content;
   position: absolute;
@@ -99,11 +99,13 @@
   left: 0;
 }
 #es-RC-container .es-hero__middle--badge {
-  max-width: 80px;
-  margin-left: 20px;
+  max-width: 70px;
+  margin-top: -90px;
+  margin-left: -30px;
+  z-index: 1;
 }
 #es-RC-container .es-hero__middle--packshot {
-  max-width: 270px;
+  max-width: 200px;
   scale: 1;
   transition: all 200ms ease-in-out;
 }
@@ -559,31 +561,6 @@
 }
 
 @media screen and (min-width: 601px) {
-  #es-RC-container .es-hero {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-  #es-RC-container .es-hero__left {
-    flex-basis: 45%;
-  }
-  #es-RC-container .es-hero__left--subtitle {
-    padding-right: 8rem;
-  }
-  #es-RC-container .es-hero__right {
-    flex-basis: 55%;
-  }
-  #es-RC-container .es-hero__right--headline {
-    top: unset;
-    bottom: 3rem;
-  }
-  #es-RC-container .es-hero__middle {
-    left: -130px;
-    align-items: flex-end;
-  }
-  #es-RC-container .es-hero__middle--badge {
-    margin-right: 50px;
-  }
   #es-RC-container .es-benefits__main {
     transform: translate(-50%, -50%);
   }
@@ -675,5 +652,39 @@
   }
   #es-RC-container .es-footer img {
     max-width: 50%;
+  }
+}
+@media screen and (min-width: 731px) {
+  #es-RC-container .es-hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  #es-RC-container .es-hero__left {
+    flex-basis: 45%;
+  }
+  #es-RC-container .es-hero__left--title {
+    padding-right: 4rem;
+  }
+  #es-RC-container .es-hero__left--subtitle {
+    padding-right: 8rem;
+  }
+  #es-RC-container .es-hero__right {
+    flex-basis: 55%;
+  }
+  #es-RC-container .es-hero__right--headline {
+    top: unset;
+    bottom: 3rem;
+  }
+  #es-RC-container .es-hero__middle {
+    left: -120px;
+  }
+  #es-RC-container .es-hero__middle--badge {
+    position: absolute;
+    top: 60px;
+    right: 15%;
+  }
+  #es-RC-container .es-hero__middle--packshot {
+    max-width: 250px;
   }
 }/*# sourceMappingURL=style.css.map */

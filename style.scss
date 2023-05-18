@@ -1,6 +1,5 @@
 // import Montserrat
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Montserrat:wght@400;700&display=swap");
 
 // color variables
 $color--main: #f08365;
@@ -11,7 +10,7 @@ $color--accent-3: #267b32;
 
 // font variables
 $ff--montserrat: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
-$ff--gotham: "gotham-condensed-bold", "Open Sans", sans-serif;
+$ff--barlow: "Barlow Condensed", "Helvetica", sans-serif;
 $fw--regular: 400;
 $fw--bold: 700;
 $ft--italic: italic;
@@ -172,7 +171,7 @@ $padding--XXL: 6rem;
     position: relative;
     &__left {
       background-image: url("#{$file-path}bg-hero-L#{$img-format}");
-      @include bg-cover(left bottom);
+      @include bg-cover(left center);
       @include flex(column, center);
       color: white;
       text-transform: uppercase;
@@ -184,57 +183,60 @@ $padding--XXL: 6rem;
       }
       &--new {
         background-color: $color--accent-1;
+        font-family: $ff--barlow;
+        font-size: 24px;
         max-width: fit-content;
         padding: 0.2rem;
         transform: rotate(355deg) skew(-5deg, 0deg);
       }
       &--title {
         font-size: clamp(2.5rem, 2.3618rem + 0.6316vw, 2.875rem);
-        min-width: 10ch;
         text-shadow: $txt-shadow;
       }
       &--subtitle {
-        font-size: clamp(1.125rem, 1.0789rem + 0.2105vw, 1.25rem);
+        //font-size: clamp(1.125rem, 1.0789rem + 0.2105vw, 1.25rem);
         text-shadow: $txt-shadow;
         text-align: center;
       }
     }
     &__right {
       background-image: url("#{$file-path}bg-hero-R#{$img-format}");
-      @include bg-cover(right bottom);
+      @include bg-cover(top);
       @include flex(column, flex-end);
       position: relative;
-      min-height: 500px;
+      min-height: 400px;
       &--headline {
         color: white;
-        font-family: $ff--gotham;
+        font-family: $ff--barlow;
         text-transform: uppercase;
         text-align: center;
         font-weight: 700;
-        // font-size: clamp(1.5rem, 0.8553rem + 2.9474vw, 3.25rem);
-        font-size: 36px;
+        font-size: clamp(2.5rem, 2.35rem + 0.8vw, 3rem);
+        line-height: 0.9;
         text-shadow: $txt-shadow;
         transform: rotate(355deg) skew(-5deg, 0deg);
         position: absolute;
         right: 1rem;
-        top: 1.5rem;
+        bottom: 3rem;
         animation: glow 2s ease-in-out infinite alternate;
       }
     }
     &__middle {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      flex-direction: row-reverse;
+      align-items: center;
       max-width: fit-content;
       position: absolute;
       bottom: 0;
       left: 0;
       &--badge {
-        max-width: 80px;
-        margin-left: 20px;
+        max-width: 70px;
+        margin-top: -90px;
+        margin-left: -30px;
+        z-index: 1;
       }
       &--packshot {
-        max-width: 270px;
+        max-width: 200px;
         scale: 1;
         transition: all 200ms ease-in-out;
         &:hover {
@@ -561,29 +563,7 @@ $padding--XXL: 6rem;
 // tablet styles
 @media screen and (min-width: 601px) {
   #es-RC-container {
-    .es-hero {
-      @include flex(row, flex-end);
-      &__left {
-        flex-basis: 45%;
-        &--subtitle {
-          padding-right: 8rem;
-        }
-      }
-      &__right {
-        flex-basis: 55%;
-        &--headline {
-          top: unset;
-          bottom: 3rem;
-        }
-      }
-      &__middle {
-        left: -130px;
-        align-items: flex-end;
-        &--badge {
-          margin-right: 50px;
-        }
-      }
-    }
+    
     .es-benefits {
       &__main {
         transform: translate(-50%, -50%);
@@ -683,6 +663,41 @@ $padding--XXL: 6rem;
     .es-footer {
       img {
         max-width: 50%;
+      }
+    }
+  }
+}
+@media screen and (min-width: 731px) {
+  #es-RC-container {
+    .es-hero {
+      @include flex(row, flex-start);
+      &__left {
+        flex-basis: 45%;
+        &--title {
+          padding-right: 4rem;
+        }
+        &--subtitle {
+          padding-right: 8rem;
+        }
+      }
+      &__right {
+        flex-basis: 55%;
+        
+        &--headline {
+          top: unset;
+          bottom: 3rem;
+        }
+      }
+      &__middle {
+        left: -120px;
+        &--badge {
+          position: absolute;
+          top: 60px;
+          right: 15%;
+        }
+        &--packshot {
+          max-width: 250px
+        }
       }
     }
   }
