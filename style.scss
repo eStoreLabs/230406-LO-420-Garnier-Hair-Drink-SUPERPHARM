@@ -394,10 +394,7 @@ $padding--XXL: 6rem;
   }
   .es-routine {
     text-align: center;
-    // a {
-    //   text-decoration: none;
-    //   color: inherit;
-    // }
+    
     &__header {
       @include heading($fs__heading--top, white);
       background-image: url("#{$file-path}bg-routine#{$img-format}");
@@ -421,15 +418,22 @@ $padding--XXL: 6rem;
       gap: $padding--M;
       margin-top: $padding--L;
       position: relative;
+      &:hover {
+        img {
+          scale: 1.05;
+          transition: 200ms ease-in;
+        }
+        .es-routine__button {
+          @include btn--primary--hover;
+        }
+      }
     }
     &__img {
       @include flex(column, center);
     }
     &__button {
       @include btn--primary;
-      &:hover {
-        @include btn--primary--hover;
-      }
+      
     }
     &__descr {
       max-width: 30ch;
@@ -490,6 +494,21 @@ $padding--XXL: 6rem;
     }
     &__single {
       margin-bottom: $padding--XL;
+      &:hover {
+        img {
+          scale: 1.05;
+          transition: all 200ms ease-in;
+        }
+        .es-cross__figcaption--1 a {
+          @include btn--secondary--hover (#f08365);
+        }
+        .es-cross__figcaption--2 a {
+          @include btn--secondary--hover (#ff9231);
+        }
+        .es-cross__figcaption--3 a {
+          @include btn--secondary--hover (#ffc317);
+        }
+      }
     }
     &__img-container {
       overflow: hidden;
@@ -497,39 +516,24 @@ $padding--XXL: 6rem;
       margin: auto;
       img {
         scale: 1.0;
-        transition: all 200ms ease-in;
-        &:hover {
-          scale: 1.05;
-        }
       }
     }
-    
-
     &__figcaption--1 {
       color: #f08365;
       & a {
         @include btn--secondary(#f08365);
-        &:hover {
-          @include btn--secondary--hover (#f08365);
-        }
       }
     }
     &__figcaption--2 {
       color: #ff9231;
       & a {
         @include btn--secondary(#ff9231);
-        &:hover {
-          @include btn--secondary--hover (#ff9231);
-        }
       }
     }
     &__figcaption--3 {
       color: #ffc317;
       & a {
         @include btn--secondary(#ffc317);
-        &:hover {
-          @include btn--secondary--hover (#ffc317);
-        }
       }
     }
 

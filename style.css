@@ -354,6 +354,14 @@
   margin-top: 2rem;
   position: relative;
 }
+#es-RC-container .es-routine__single:hover img {
+  scale: 1.05;
+  transition: 200ms ease-in;
+}
+#es-RC-container .es-routine__single:hover .es-routine__button {
+  background-color: white;
+  color: #f08365;
+}
 #es-RC-container .es-routine__img {
   display: flex;
   flex-direction: column;
@@ -374,10 +382,6 @@
   width: 150px;
   margin-top: 0.5rem;
   transition: 0.4s ease-in-out;
-}
-#es-RC-container .es-routine__button:hover {
-  background-color: white;
-  color: #f08365;
 }
 #es-RC-container .es-routine__descr {
   max-width: 30ch;
@@ -453,6 +457,22 @@
 #es-RC-container .es-cross__single {
   margin-bottom: 3rem;
 }
+#es-RC-container .es-cross__single:hover img {
+  scale: 1.05;
+  transition: all 200ms ease-in;
+}
+#es-RC-container .es-cross__single:hover .es-cross__figcaption--1 a {
+  background-color: #f08365;
+  color: white;
+}
+#es-RC-container .es-cross__single:hover .es-cross__figcaption--2 a {
+  background-color: #ff9231;
+  color: white;
+}
+#es-RC-container .es-cross__single:hover .es-cross__figcaption--3 a {
+  background-color: #ffc317;
+  color: white;
+}
 #es-RC-container .es-cross__img-container {
   overflow: hidden;
   max-width: 300px;
@@ -460,10 +480,6 @@
 }
 #es-RC-container .es-cross__img-container img {
   scale: 1;
-  transition: all 200ms ease-in;
-}
-#es-RC-container .es-cross__img-container img:hover {
-  scale: 1.05;
 }
 #es-RC-container .es-cross__figcaption--1 {
   color: #f08365;
@@ -483,10 +499,6 @@
   color: #f08365;
   transition: 0.4s ease-in-out;
 }
-#es-RC-container .es-cross__figcaption--1 a:hover {
-  background-color: #f08365;
-  color: white;
-}
 #es-RC-container .es-cross__figcaption--2 {
   color: #ff9231;
 }
@@ -505,10 +517,6 @@
   color: #ff9231;
   transition: 0.4s ease-in-out;
 }
-#es-RC-container .es-cross__figcaption--2 a:hover {
-  background-color: #ff9231;
-  color: white;
-}
 #es-RC-container .es-cross__figcaption--3 {
   color: #ffc317;
 }
@@ -526,10 +534,6 @@
   text-transform: uppercase;
   color: #ffc317;
   transition: 0.4s ease-in-out;
-}
-#es-RC-container .es-cross__figcaption--3 a:hover {
-  background-color: #ffc317;
-  color: white;
 }
 #es-RC-container .es-cross__title {
   font-size: clamp(1.75rem, 1.45rem + 1.6vw, 2.25rem);
