@@ -29,7 +29,7 @@
   position: relative;
 }
 #es-RC-container .es-hero__left {
-  background-image: url("./img/bg-hero-L.png");
+  background-image: url("../images/bg-hero-L.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left center;
@@ -63,7 +63,7 @@
   text-align: center;
 }
 #es-RC-container .es-hero__right {
-  background-image: url("./img/bg-hero-R.png");
+  background-image: url("../images/bg-hero-R.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -187,7 +187,7 @@
   scale: 1.05;
 }
 #es-RC-container .es-how {
-  background-image: url("./img/bg-hair.png");
+  background-image: url("../images/bg-hair.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -302,7 +302,7 @@
   z-index: 1;
 }
 #es-RC-container .es-before-after {
-  background-image: url("./img/bg-before-after.png");
+  background-image: url("../images/bg-before-after.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -328,7 +328,7 @@
   text-transform: uppercase;
   font-size: clamp(1.625rem, 1.4rem + 1.2vw, 2rem);
   color: white;
-  background-image: url("./img/bg-routine.png");
+  background-image: url("../images/bg-routine.png");
   padding: 2rem;
 }
 #es-RC-container .es-routine__header span {
@@ -409,7 +409,7 @@
   top: 50%;
   width: 90%;
   padding-block: 2rem;
-  background-image: url("./img/recycle-symbol.png");
+  background-image: url("../images/recycle-symbol.png");
   background-color: white;
   background-size: contain;
   background-repeat: no-repeat;
@@ -581,7 +581,7 @@
     height: 3.5rem;
   }
   #es-RC-container .es-how__wrapper::before {
-    content: url("./img/arrow-left.png");
+    content: url("../images/arrow-left.png");
     position: absolute;
     left: -125px;
     top: 93px;
@@ -596,7 +596,7 @@
     padding: unset;
   }
   #es-RC-container .es-routine__bg {
-    background-image: url("./img/bg-routine.png");
+    background-image: url("../images/bg-routine.png");
     background-size: contain;
     background-repeat: no-repeat;
     padding-top: 2rem;

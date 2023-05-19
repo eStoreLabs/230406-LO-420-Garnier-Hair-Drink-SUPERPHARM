@@ -36,7 +36,7 @@ $txt-stroke--accent: -1px 1px 0 $color--accent-2, 1px 1px 0 $color--accent-2,
 
 // utility variables
 // images
-$file-path: "./img/";
+$file-path: "../images/";
 $img-format: ".png";
 
 // padding
@@ -171,6 +171,7 @@ $padding--XXL: 6rem;
     position: relative;
     &__left {
       background-image: url("#{$file-path}bg-hero-L#{$img-format}");
+      
       @include bg-cover(left center);
       @include flex(column, center);
       color: white;
